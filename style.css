@@ -7,31 +7,34 @@
 body{
     font-family: 'Kumbh Sans', sans-serif;
     height:100vh;
+    padding: 1rem 100px;
 }
-.menu{
-    width:25px;
-    position:absolute;
-    top:35px;
-    left:35px;
+.brand i{
     display:none;
+}
+
+.brand{display: flex; 
+align-items: center;}
+
+header{
+    border-bottom: 1px solid lightgray;
+    padding-bottom : 3rem;
 }
 .entete{
     display:flex;
     justify-content:space-between;
-    margin-left:20px;
+  
 }
 .entete-gauche{
     display:flex;
-    margin-left:70px;
+   
 }
 .entete-droit{
     display:flex;
     margin-top:15px;
-    margin-right:75px;
+   
 }
-.logo{
-    padding-top:25px;
-}
+
 nav a{
     text-decoration:none;
     color:gray;
@@ -60,9 +63,7 @@ nav a{
     background-color:#e8e9e8;
 
 }
-.entete-droit{
-    margin-right:30px;
-}
+
 .container{
     display:flex;
     justify-content:center;
@@ -163,24 +164,32 @@ span{
 }
 
 /* responsive format smartphone */
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 512px) {
+
+    body{
+        padding: 0;
+    }
+
+    header{
+        border-bottom: none;
+        padding: 0.5rem;
+        
+    }
     .barre, .separator{
         display:none;
     }
-    .entete{
-        margin-top:20px;
-    }
+   
     .iconepanier{
         margin-right:20px;
     }
-    .menu{
+    .brand i{
         display:block;
-        margin-top:10px;
     }
     .main{
         display:flex;
         flex-direction:column;
         width:100%;
+        margin-top: 1rem;
     }
     .main-left{
         width:100%;
@@ -240,6 +249,10 @@ span{
     .prices{
         display:flex;
         justify-content:space-between;
+    }
+
+    .logo{
+        margin-left: 0.5rem;
     }
 
     }
